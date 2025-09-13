@@ -1,11 +1,11 @@
 {
   "name": "n8n-nodes-jetapi",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Send messages via Telegram and WhatsApp using JetAPI - messaging automation for n8n. Get 10 days free trial!",
   "keywords": [
     "n8n-community-node-package",
     "jetapi",
-    "telegram", 
+    "telegram",
     "whatsapp",
     "messaging",
     "notifications",
@@ -20,18 +20,24 @@
     "email": "support@jetapi.io"
   },
   "repository": {
-    "type": "git", 
+    "type": "git",
     "url": "https://github.com/jetapi/n8n-nodes-jetapi.git"
   },
   "main": "index.js",
   "scripts": {
     "build": "tsc"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "n8n": {
     "n8nNodesApiVersion": 1,
-    "credentials": ["dist/credentials/JetapiApi.credentials.js"],
-    "nodes": ["dist/nodes/Jetapi/Jetapi.node.js"]
+    "credentials": [
+      "dist/credentials/JetapiApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/Jetapi/Jetapi.node.js"
+    ]
   },
   "devDependencies": {
     "@types/node": "^18.16.16",
