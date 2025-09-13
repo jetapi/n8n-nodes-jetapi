@@ -1,33 +1,37 @@
 {
   "name": "n8n-nodes-jetapi",
-  "version": "1.0.0",
-  "description": "n8n community node for JetAPI - send messages via Telegram and WhatsApp",
-  "keywords": ["n8n-community-node-package"],
+  "version": "1.0.1",
+  "description": "Send messages via Telegram and WhatsApp using JetAPI - messaging automation for n8n. Get 10 days free trial!",
+  "keywords": [
+    "n8n-community-node-package",
+    "jetapi",
+    "telegram", 
+    "whatsapp",
+    "messaging",
+    "notifications",
+    "sms",
+    "automation",
+    "communication"
+  ],
   "license": "MIT",
-  "homepage": "https://jetapi.io",
+  "homepage": "https://jetapi.io/login?referral=n8n&subs_slug=jtp_individ&subs_type=temp",
   "author": {
     "name": "JetAPI",
     "email": "support@jetapi.io"
   },
   "repository": {
-    "type": "git",
+    "type": "git", 
     "url": "https://github.com/jetapi/n8n-nodes-jetapi.git"
   },
   "main": "index.js",
   "scripts": {
     "build": "tsc"
   },
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
   "n8n": {
     "n8nNodesApiVersion": 1,
-    "credentials": [
-      "dist/credentials/JetapiApi.credentials.js"
-    ],
-    "nodes": [
-      "dist/nodes/Jetapi/Jetapi.node.js"
-    ]
+    "credentials": ["dist/credentials/JetapiApi.credentials.js"],
+    "nodes": ["dist/nodes/Jetapi/Jetapi.node.js"]
   },
   "devDependencies": {
     "@types/node": "^18.16.16",
