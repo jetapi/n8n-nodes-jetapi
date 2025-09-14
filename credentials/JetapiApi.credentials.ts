@@ -1,6 +1,7 @@
 import {
     ICredentialType,
     INodeProperties,
+    ICredentialTestRequest,
 } from 'n8n-workflow';
 
 export class JetapiApi implements ICredentialType {
@@ -18,4 +19,30 @@ export class JetapiApi implements ICredentialType {
             description: 'Your JetAPI Bearer Token from dashboard',
         },
     ];
+
+    // Добавляем credential test для n8n верификации
+    test: ICredentialTestRequest = {
+        request: {
+            baseURL: 'https://api.jetapi.io/api/v1',
+            url: '/delivery',
+            method: 'POST',
+            headers: {
+                'Authorization': 'Bearer {{$credentials.bearerToken}}',
+                'Content-Type': 'application/json',
+            },
+            body: {
+                text: 'n8n credential test',
+                phone: '+1234567890',
+            },
+        },
+        rules: [
+            {
+                type: 'responseCode',
+                properties: {
+                    value: 200,
+                    message: 'Invalid JetAPI Bearer Token or API error',
+                },
+            },
+        ],
+    };
 }
