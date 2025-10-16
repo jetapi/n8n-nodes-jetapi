@@ -20,7 +20,7 @@ export class JetapiApi implements ICredentialType {
         },
     ];
 
-    // Добавляем credential test для n8n верификации
+    // Add credential test for n8n verification
     test: ICredentialTestRequest = {
         request: {
             baseURL: 'https://api.jetapi.io/api/v1',

@@ -292,16 +292,18 @@ export class Jetapi implements INodeType {
                       }
                   });
 
-                  const responseData = await this.helpers.request({
-                      method: 'POST',
-                      url: 'https://api.jetapi.io/api/v1/delivery',
-                      body: requestBody,
-                      json: true,
-                      headers: {
-                          'Authorization': `Bearer ${credentials.bearerToken}`,
-                          'Content-Type': 'application/json',
-                      },
-                  });
+                  const responseData = await this.helpers.httpRequestWithAuthentication(
+  			'jetapiApi',
+  			{
+    			method: 'POST',
+    			url: 'https://api.jetapi.io/api/v1/delivery',
+    			body: requestBody,
+    			json: true,
+    			headers: {
+      			'Content-Type': 'application/json',
+    			},
+  		       }
+		   );
 
                   const executionData = this.helpers.constructExecutionMetaData(
                       this.helpers.returnJsonArray(responseData),

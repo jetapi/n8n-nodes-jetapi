@@ -21,7 +21,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jetapi/n8n-nodes-jetapi.git"
+    "url": "git+https://github.com/jetapi/n8n-nodes-jetapi.git"
   },
   "main": "index.js",
   "scripts": {
@@ -39,9 +39,11 @@
       "dist/nodes/Jetapi/Jetapi.node.js"
     ]
   },
+  "peerDependencies": {
+  "n8n-workflow": "*"
+  },
   "devDependencies": {
     "@types/node": "^18.16.16",
-    "n8n-workflow": "*",
     "typescript": "^4.8.4"
   }
 }
