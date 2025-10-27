@@ -17,7 +17,7 @@ class JetapiApi {
                 description: 'Your JetAPI Bearer Token from dashboard',
             },
         ];
-        // Добавляем credential test для n8n верификации
+        // Add credential test for n8n verification
         this.test = {
             request: {
                 baseURL: 'https://api.jetapi.io/api/v1',

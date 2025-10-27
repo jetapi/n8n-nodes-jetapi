@@ -6,8 +6,9 @@ class Jetapi {
         this.description = {
             displayName: 'JetAPI',
             name: 'jetapi',
+            icon: 'file:jetapi.svg',
             group: ['communication'],
-            version: 5,
+            version: 6,
             subtitle: '={{$parameter["operation"]}}',
             description: 'Integrate with JetAPI for Telegram and WhatsApp messaging',
             defaults: { name: 'JetAPI' },
@@ -290,8 +291,8 @@ class Jetapi {
                         body: requestBody,
                         json: true,
                         headers: {
-                            'Authorization': `Bearer ${credentials.bearerToken}`,
                             'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${credentials.bearerToken}`,
                         },
                     });
                     const executionData = this.helpers.constructExecutionMetaData(this.helpers.returnJsonArray(responseData), { itemData: { item: i } });

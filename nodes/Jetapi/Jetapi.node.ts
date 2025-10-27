@@ -10,8 +10,9 @@ export class Jetapi implements INodeType {
   description: INodeTypeDescription = {
       displayName: 'JetAPI',
       name: 'jetapi',
+      icon: 'file:jetapi.svg',
       group: ['communication'],
-      version: 5,
+      version: 6,
       subtitle: '={{$parameter["operation"]}}',
       description: 'Integrate with JetAPI for Telegram and WhatsApp messaging',
       defaults: { name: 'JetAPI' },
@@ -292,16 +293,15 @@ export class Jetapi implements INodeType {
                       }
                   });
 
-                  const responseData = await this.helpers.httpRequestWithAuthentication(
-  			'jetapiApi',
-  			{
-    			method: 'POST',
+                  const responseData = await this.helpers.request({
+  			 method: 'POST',
     			url: 'https://api.jetapi.io/api/v1/delivery',
     			body: requestBody,
     			json: true,
     			headers: {
-      			'Content-Type': 'application/json',
-    			},
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${credentials.bearerToken}`,
+          },
   		       }
 		   );
 
