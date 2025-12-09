@@ -1,6 +1,6 @@
 {
   "name": "n8n-nodes-jetapi",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Send messages via Telegram and WhatsApp using JetAPI - messaging automation for n8n. Get 10 days free trial!",
   "keywords": [
     "n8n-community-node-package",

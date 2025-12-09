@@ -6,7 +6,7 @@ class Jetapi {
         this.description = {
             displayName: 'JetAPI',
             name: 'jetapi',
-            icon: 'file:jetapi.svg',
+            icon: 'file:nodes/Jetapi/jetapi.svg',
             group: ['communication'],
             version: 6,
             subtitle: '={{$parameter["operation"]}}',
