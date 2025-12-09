@@ -294,7 +294,8 @@ export class Jetapi implements INodeType {
                   });
 
 // @ts-ignore - TypeScript compatibility issue with n8n types
-                 const responseData = await this.helpers.httpRequestWithAuthentication.call(
+                 const credentials = await this.getCredentials('jetapiApi');
+const responseData = await this.helpers.httpRequestWithAuthentication.call(
     this,
     'jetapiApi',
     {
@@ -304,6 +305,7 @@ export class Jetapi implements INodeType {
         json: true,
         headers: {
             'Content-Type': 'application/json',
+            'Authorization': `Bearer ${credentials.bearerToken}`,
         },
     }
 );

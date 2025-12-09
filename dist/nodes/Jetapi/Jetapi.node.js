@@ -286,6 +286,7 @@ class Jetapi {
                         }
                     });
                     // @ts-ignore - TypeScript compatibility issue with n8n types
+                    const credentials = await this.getCredentials('jetapiApi');
                     const responseData = await this.helpers.httpRequestWithAuthentication.call(this, 'jetapiApi', {
                         method: 'POST',
                         url: 'https://api.jetapi.io/api/v1/delivery',
@@ -293,6 +294,7 @@ class Jetapi {
                         json: true,
                         headers: {
                             'Content-Type': 'application/json',
+                            'Authorization': `Bearer ${credentials.bearerToken}`,
                         },
                     });
                     const executionData = this.helpers.constructExecutionMetaData(this.helpers.returnJsonArray(responseData), { itemData: { item: i } });
