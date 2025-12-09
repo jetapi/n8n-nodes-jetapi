@@ -10,7 +10,7 @@ export class Jetapi implements INodeType {
   description: INodeTypeDescription = {
       displayName: 'JetAPI',
       name: 'jetapi',
-      icon: 'file:./jetapi.png',
+      icon: 'file:nodes/Jetapi/jetapi.png',
       group: ['communication'],
       version: 6,
       subtitle: '={{$parameter["operation"]}}',
