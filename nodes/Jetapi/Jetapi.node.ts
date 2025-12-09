@@ -10,7 +10,7 @@ export class Jetapi implements INodeType {
   description: INodeTypeDescription = {
       displayName: 'JetAPI',
       name: 'jetapi',
-      icon: 'file:nodes/Jetapi/jetapi.svg',
+      icon: 'data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICA8cGF0aCBkPSJNMjk2LjIsMjcuOWMtMjQuOS0xNC4zLTU1LjUtMTQuMy04MC40LDBMNzguNCwxMDdjLTI1LDE0LjQtNDAuMyw0MS00MC4zLDY5Ljh2MTU3LjhjMCwyOC44LDE1LjQsNTUuNCw0MC4zLDY5LjhsMTM3LjQsNzkuMWMyNC45LDE0LjMsNTUuNSwxNC4zLDgwLjQsMGwxMzcuNC03OS4xYzI1LTE0LjQsNDAuMy00MSw0MC4zLTY5LjhWMTc2LjhjMC0yOC44LTE1LjQtNTUuNC00MC4zLTY5LjhMMjk2LjIsMjcuOXoiIGZpbGw9IiMwNTY4RkQiLz4KICA8cGF0aCBkPSJNMjUwLjEsNDE4LjhsLTEyOC41LTc0Yy00LjUtMi42LTQuNS05LjEsMC0xMS43bDYzLjItMzYuNGMzLjctMi4xLDguMS0yLjEsMTEuOCwwbDUzLjUsMzAuOGMzLjcsMi4xLDguMSwyLjEsMTEuOCwwbDUzLjUtMzAuOGMzLjctMi4xLDUuOS02LDUuOS0xMC4ydi02OC40di03OS42YzAtNS4yLDUuNi04LjQsMTAuMS01LjlsNjMuMiwzNi40YzMuNywyLjEsNS45LDYsNS45LDEwLjJ2MTUyLjhjMCw0LjItMi4zLDguMS01LjksMTAuMmwtMTMyLjcsNzYuNEMyNTguMiw0MjAuOSwyNTMuOCw0MjAuOSwyNTAuMSw0MTguOHoiIGZpbGw9IiNGRkZGRkYiLz4KPC9zdmc+Cg==' as any,
       group: ['communication'],
       version: 6,
       subtitle: '={{$parameter["operation"]}}',
