@@ -286,7 +286,7 @@ class Jetapi {
                         }
                     });
                     // @ts-ignore - TypeScript compatibility issue with n8n types
-                    const responseData = await this.helpers.httpRequestWithAuthentication('jetapiApi', {
+                    const responseData = await this.helpers.httpRequestWithAuthentication.call(this, 'jetapiApi', {
                         method: 'POST',
                         url: 'https://api.jetapi.io/api/v1/delivery',
                         body: requestBody,

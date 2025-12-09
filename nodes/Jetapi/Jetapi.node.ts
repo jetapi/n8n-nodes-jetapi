@@ -294,7 +294,8 @@ export class Jetapi implements INodeType {
                   });
 
 // @ts-ignore - TypeScript compatibility issue with n8n types
-                  const responseData = await this.helpers.httpRequestWithAuthentication(
+                 const responseData = await this.helpers.httpRequestWithAuthentication.call(
+    this,
     'jetapiApi',
     {
         method: 'POST',
