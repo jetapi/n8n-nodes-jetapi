@@ -4,7 +4,7 @@ import {
 	INodeExecutionData,
 	INodeType,
 	INodeTypeDescription,
-	NodeConnectionTypes,
+	NodeConnectionType,
 } from 'n8n-workflow';
 
 export class Jetapi implements INodeType {
@@ -17,8 +17,8 @@ export class Jetapi implements INodeType {
 		subtitle: '={{$parameter["operation"]}}',
 		description: 'Integrate with JetAPI for Telegram and WhatsApp messaging',
 		defaults: { name: 'JetAPI' },
-		inputs: [NodeConnectionTypes.Main],
-		outputs: [NodeConnectionTypes.Main],
+		inputs: [NodeConnectionType.Main],
+		outputs: [NodeConnectionType.Main],
 		usableAsTool: true,
 		credentials: [{ name: 'jetapiApi', required: true }],
 		properties: [

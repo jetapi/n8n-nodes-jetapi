@@ -24,7 +24,7 @@
     "url": "git+https://github.com/jetapi/n8n-nodes-jetapi.git"
   },
 	"scripts": {
-		"build": "n8n-node build",
+		"build": "tsc",
 		"build:watch": "tsc --watch",
 		"dev": "n8n-node dev",
 		"lint": "n8n-node lint",
