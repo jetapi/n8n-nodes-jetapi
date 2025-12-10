@@ -2,3 +2,4 @@ node_modules/
 *.tgz
 pnpm-lock.yaml
 *.backup
+dist
